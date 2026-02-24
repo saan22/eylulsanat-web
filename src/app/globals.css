@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFBF4;
+  /* Saman kağıdı / Fildişi tonu */
+  --foreground: #2D2A26;
+  /* Koyu antrasit / Kağıt üstü mürekkep tonu */
+}
+
+@theme {
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-montserrat);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Sayfa geçişleri ve genel yumuşaklık */
+* {
+  transition: background-color 0.3s ease;
+}

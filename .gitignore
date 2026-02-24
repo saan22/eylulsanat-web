@@ -1,0 +1,36 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+/build
+
+# Production deployment packages (local only)
+/yayin_paketi/
+*.zip
+paketle.ps1
+zip_deploy.ps1
+
+# Database files - sunucuda admin tarafindan yonetilir, git'e alinmaz
+# Ilk kurulumda cpanel'e manuel yukle
+/database/
+
+# Environment variables
+.env*
+
+# Debug logs
+*.log
+session-debug.log
+server-debug.log
+
+# Misc
+.DS_Store
+*.pem
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*

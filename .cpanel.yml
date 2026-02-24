@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/$(pwd | awk -F'/' '{print $NF}')
+    - npm install
+    - npm run build
