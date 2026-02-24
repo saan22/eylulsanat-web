@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone', // cPanel deployment icin gerekli
+    // output: 'standalone' kaldirildi - custom server.js ile normal mod kullaniliyor
 };
 
 module.exports = nextConfig;

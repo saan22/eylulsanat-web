@@ -1,7 +1,0 @@
-1:"$Sreact.fragment"
-2:I[244,["/_next/static/chunks/b04ebe1d9c9f6126.js"],"default"]
-3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-4:"$Sreact.suspense"
-:HL["/nerzen-logo.png","image"]
-0:{"buildId":"ANUxL1qJYSZZKoj2dUShy","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4","children":[["$","div",null,{"className":"bg-white p-8 rounded-2xl shadow-xl w-full max-w-md flex flex-col items-center","children":[["$","h1",null,{"className":"text-2xl font-bold mb-2","children":"Yönetici Girişi"}],["$","p",null,{"className":"text-gray-500 mb-6 text-sm","children":"Devam etmek için şifrenizi giriniz."}],["$","$L2",null,{}]]}],["$","div",null,{"className":"mt-8 flex flex-col items-center opacity-40 hover:opacity-100 transition-opacity duration-500","children":[["$","a",null,{"href":"https://nerzen.com","target":"_blank","rel":"noopener noreferrer","className":"bg-gray-900 p-2 rounded-lg mb-3 hover:bg-black transition-colors","children":["$","img",null,{"src":"/nerzen-logo.png","alt":"Nerzen Bilişim","className":"h-4 w-auto"}]}],["$","p",null,{"className":"text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500","children":"Powered by Nerzen Bilişim"}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/b04ebe1d9c9f6126.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
-5:null

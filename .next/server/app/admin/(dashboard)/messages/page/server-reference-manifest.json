@@ -1,0 +1,35 @@
+{
+  "node": {
+    "0045e9b9d28bc56362bae83ded660aa300f0f050e3": {
+      "workers": {
+        "app/admin/(dashboard)/messages/page": {
+          "moduleId": 45181,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/messages/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "src/actions/auth.ts"
+    },
+    "401d17d2596d157ff12d67e1a915ca1524fb8dcfab": {
+      "workers": {
+        "app/admin/(dashboard)/messages/page": {
+          "moduleId": 45181,
+          "async": false,
+          "exportedName": "deleteMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/messages/page": "action-browser"
+      },
+      "exportedName": "deleteMessage",
+      "filename": "src/actions/messages.ts"
+    }
+  },
+  "edge": {}
+}
