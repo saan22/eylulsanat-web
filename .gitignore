@@ -1,5 +1,6 @@
 # Dependencies - cPanel'de npm install ile kurulur, git'e alinmaz
 /node_modules
+package-lock.json
 
 # Next.js - agir klasorler haric, build output git'e aliniyor
 .next/cache
