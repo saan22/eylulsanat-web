@@ -1,0 +1,23 @@
+{
+  "/(site)/galeri/page": "app/(site)/galeri/page.js",
+  "/(site)/iletisim/page": "app/(site)/iletisim/page.js",
+  "/(site)/kurslar/[slug]/page": "app/(site)/kurslar/[slug]/page.js",
+  "/(site)/kurslar/page": "app/(site)/kurslar/page.js",
+  "/(site)/page": "app/(site)/page.js",
+  "/(site)/urunler/[slug]/page": "app/(site)/urunler/[slug]/page.js",
+  "/(site)/urunler/page": "app/(site)/urunler/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/(dashboard)/courses/[id]/page": "app/admin/(dashboard)/courses/[id]/page.js",
+  "/admin/(dashboard)/courses/new/page": "app/admin/(dashboard)/courses/new/page.js",
+  "/admin/(dashboard)/courses/page": "app/admin/(dashboard)/courses/page.js",
+  "/admin/(dashboard)/gallery/page": "app/admin/(dashboard)/gallery/page.js",
+  "/admin/(dashboard)/messages/page": "app/admin/(dashboard)/messages/page.js",
+  "/admin/(dashboard)/page": "app/admin/(dashboard)/page.js",
+  "/admin/(dashboard)/products/[id]/page": "app/admin/(dashboard)/products/[id]/page.js",
+  "/admin/(dashboard)/products/new/page": "app/admin/(dashboard)/products/new/page.js",
+  "/admin/(dashboard)/products/page": "app/admin/(dashboard)/products/page.js",
+  "/admin/(dashboard)/settings/page": "app/admin/(dashboard)/settings/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

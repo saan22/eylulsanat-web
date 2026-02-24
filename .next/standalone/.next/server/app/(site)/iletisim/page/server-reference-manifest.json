@@ -1,0 +1,50 @@
+{
+  "node": {
+    "40c42e216d81f61e834f730bae2d38698c7cab55ca": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": 11181,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/(site)/iletisim/page.tsx"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "src/app/(site)/iletisim/page.tsx"
+    },
+    "405a6796fd8e089b7945d600c4e7df90f8dfe5353a": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": 11181,
+          "async": false,
+          "exportedName": "sendMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "sendMessage",
+      "filename": "src/actions/messages.ts"
+    },
+    "4089af1683656e022cc222842434c201b37267cb0e": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": 11181,
+          "async": false,
+          "exportedName": "deleteMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "deleteMessage",
+      "filename": "src/actions/messages.ts"
+    }
+  },
+  "edge": {}
+}

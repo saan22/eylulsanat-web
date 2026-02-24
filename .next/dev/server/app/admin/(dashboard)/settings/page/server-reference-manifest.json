@@ -1,0 +1,65 @@
+{
+  "node": {
+    "00c40a5fb022569ec23f2a4d238b75af0261bb5ef2": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/settings/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/settings.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "src/actions/auth.ts"
+    },
+    "401aa3a4fe58f20c9d83bb029e5fdee8eb9749d368": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/settings/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/settings.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateSettings",
+          "filename": "src/actions/settings.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "exportedName": "updateSettings",
+      "filename": "src/actions/settings.ts"
+    },
+    "4037b4658adbcba2228620298c225561e30189af45": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/settings/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/settings.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updatePassword",
+          "filename": "src/actions/settings.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "exportedName": "updatePassword",
+      "filename": "src/actions/settings.ts"
+    },
+    "407ffac5d3836a7faf25de44e83239613a39ee2b67": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/settings/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/settings.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadImage",
+          "filename": "src/actions/upload.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "exportedName": "uploadImage",
+      "filename": "src/actions/upload.ts"
+    }
+  },
+  "edge": {}
+}

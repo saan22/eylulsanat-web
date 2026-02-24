@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00c40a5fb022569ec23f2a4d238b75af0261bb5ef2": {
+      "workers": {
+        "app/admin/(dashboard)/messages/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/messages/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/messages.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/messages/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "src/actions/auth.ts"
+    },
+    "40682ff682ee3bcb67ca95e95c11e07bb6f66518cc": {
+      "workers": {
+        "app/admin/(dashboard)/messages/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/(dashboard)/messages/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/messages.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/messages/page": "action-browser"
+      },
+      "exportedName": "deleteMessage",
+      "filename": "src/actions/messages.ts"
+    }
+  },
+  "edge": {}
+}

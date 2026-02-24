@@ -1,10 +1,12 @@
 # Dependencies
 /node_modules
 
-# Next.js build output
-/.next/
-/out/
-/build
+# Next.js - cache klasörleri haric, build output git'e aliniyor
+.next/cache
+.next/server/app
+.next/server/chunks
+.next/server/edge-chunks
+.next/trace
 
 # Production deployment packages (local only)
 /yayin_paketi/

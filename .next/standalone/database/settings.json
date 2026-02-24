@@ -1,0 +1,38 @@
+{
+  "siteTitle": "Eylül Sanat Atölyesi",
+  "siteDescription": "Çerkezköy'de sanatın kalbi burada atıyor. Resim ve mum atölyelerimizle yaratıcılığınızı keşfedin.",
+  "contact": {
+    "phone": "05326474004",
+    "email": "info@eylulsanatatolyesi.com",
+    "address": "Gazi Oaman Paşa Mah. Uğur Mumcu Cad. No: 18 Halkbank arkası\r\nÇerkezköy/ Tekirdağ",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d374.7694021905224!2d27.999679341490264!3d41.28372622020296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b527605f6cefd1%3A0xe74f76a17a0108a7!2sEyl%C3%BCl%20Sanat%20At%C3%B6lyesi!5e0!3m2!1str!2str!4v1770309450039!5m2!1str!2str"
+  },
+  "socials": {
+    "instagram": "https://instagram.com/eylulsanatatolyesi",
+    "facebook": "https://facebook.com/eylulsanatatolyesi",
+    "youtube": "https://youtube.com/@eylulsanatatolyesi"
+  },
+  "features": {
+    "maintenanceMode": false
+  },
+  "hero": {
+    "title": "Sanat, herkes için bir yolculuktur.",
+    "subtitle": "Kendi hikayenizi renklerle, notalarla ve formlarla anlatmaya hazır mısınız? Profesyonel eğitmenler eşliğinde yeteneklerinizi keşfedin.",
+    "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=2080&auto=format&fit=crop"
+  },
+  "about": {
+    "title": "Biz Kimiz?",
+    "description": "Sanat atölyemizde çocuklar ve yetişkinler için resim ve mum üzerine keyifli, öğretici ve ilham verici çalışmalar yapıyoruz. Usta öğretici eşliğinde gerçekleşen derslerimizde yalnızca teknik bilgi değil; hayal gücü ve üretmenin mutluluğu da ön planda tutulur. Her yaşa ve seviyeye uygun, bireysel veya grup çalışmaları ile atölyemizde sanatın gücünü birlikte keşfediyoruz. Atölyemizde bireysel gelişimi önceleyen yaklaşım ile katılımcıların özgün ifade biçimleri desteklenir, her bireyin kendi sanatsal yolculuğuna saygı duyulur. Resmin renkleriyle, mumun sıcak dokusunu bir araya getiren atölyemizde; el emeği, sabır ve yaratıcılık buluşur. \r\nKurucu: Gaye Ezgi Kardaş",
+    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop"
+  },
+  "whyUs": {
+    "title": "Neden Bizi Seçmelisiniz?",
+    "items": [
+      "Akademik eğitimli sanatçılar",
+      "Bireysel yeteneğe odaklı butik sınıflar",
+      "Öğrenci sergileri ve konserler"
+    ]
+  },
+  "logo": "/uploads/eyl_l__600_x_200_piksel_-de50b61d-c232-4e1c-af70-3307611ee8e6.png",
+  "adminPasswordHash": "$2b$10$HP3hMoMTXxUl0BmjKf6Op.Hu48eyN5PqZ71XLC8zrGCSklY.9u0Ga"
+}

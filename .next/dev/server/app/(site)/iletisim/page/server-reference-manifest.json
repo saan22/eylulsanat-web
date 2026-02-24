@@ -1,0 +1,50 @@
+{
+  "node": {
+    "40cec5907ffd046468a96caa17d5d72c56e6c83b54": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": "[project]/.next-internal/server/app/(site)/iletisim/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(site)/iletisim/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/messages.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/(site)/iletisim/page.tsx"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "src/app/(site)/iletisim/page.tsx"
+    },
+    "40682ff682ee3bcb67ca95e95c11e07bb6f66518cc": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": "[project]/.next-internal/server/app/(site)/iletisim/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(site)/iletisim/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/messages.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "deleteMessage",
+      "filename": "src/actions/messages.ts"
+    },
+    "40e1d0a761d0243634382c1edc47202f34b69d4ea5": {
+      "workers": {
+        "app/(site)/iletisim/page": {
+          "moduleId": "[project]/.next-internal/server/app/(site)/iletisim/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(site)/iletisim/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/actions/messages.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "sendMessage",
+          "filename": "src/actions/messages.ts"
+        }
+      },
+      "layer": {
+        "app/(site)/iletisim/page": "rsc"
+      },
+      "exportedName": "sendMessage",
+      "filename": "src/actions/messages.ts"
+    }
+  },
+  "edge": {}
+}
