@@ -1,0 +1,35 @@
+{
+  "node": {
+    "0045e9b9d28bc56362bae83ded660aa300f0f050e3": {
+      "workers": {
+        "app/admin/(dashboard)/courses/page": {
+          "moduleId": 51418,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/courses/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "src/actions/auth.ts"
+    },
+    "40866edfec8f927f3cafdf8512f1f06f076917111c": {
+      "workers": {
+        "app/admin/(dashboard)/courses/page": {
+          "moduleId": 51418,
+          "async": false,
+          "exportedName": "deleteCourse",
+          "filename": "src/actions/courses.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/courses/page": "action-browser"
+      },
+      "exportedName": "deleteCourse",
+      "filename": "src/actions/courses.ts"
+    }
+  },
+  "edge": {}
+}

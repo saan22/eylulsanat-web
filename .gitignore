@@ -2,8 +2,12 @@
 /node_modules
 package-lock.json
 
-# Next.js - build output (Vercel bunu otomatik olusturur)
-/.next/
+# Next.js - build output git'te tutulmalı (cPanel için)
+.next/cache
+.next/standalone        
+.next/turbopack
+.next/trace
+.next/trace-build
 
 # Production deployment packages (local only)
 /yayin_paketi/

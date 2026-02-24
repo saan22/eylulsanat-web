@@ -1,0 +1,65 @@
+{
+  "node": {
+    "0045e9b9d28bc56362bae83ded660aa300f0f050e3": {
+      "workers": {
+        "app/admin/(dashboard)/products/new/page": {
+          "moduleId": 24845,
+          "async": false,
+          "exportedName": "logout",
+          "filename": "src/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/products/new/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "src/actions/auth.ts"
+    },
+    "40bb89a2d76cc84c1cc6e414690912a504149a50f0": {
+      "workers": {
+        "app/admin/(dashboard)/products/new/page": {
+          "moduleId": 24845,
+          "async": false,
+          "exportedName": "createProduct",
+          "filename": "src/actions/products.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/products/new/page": "action-browser"
+      },
+      "exportedName": "createProduct",
+      "filename": "src/actions/products.ts"
+    },
+    "60899f959fba04a8735acceb673007bde5f31ad751": {
+      "workers": {
+        "app/admin/(dashboard)/products/new/page": {
+          "moduleId": 24845,
+          "async": false,
+          "exportedName": "updateProduct",
+          "filename": "src/actions/products.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/products/new/page": "action-browser"
+      },
+      "exportedName": "updateProduct",
+      "filename": "src/actions/products.ts"
+    },
+    "40f282f1b7f6ba2f9131f89b460fc154dd7302e6d3": {
+      "workers": {
+        "app/admin/(dashboard)/products/new/page": {
+          "moduleId": 24845,
+          "async": false,
+          "exportedName": "uploadImage",
+          "filename": "src/actions/upload.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/products/new/page": "action-browser"
+      },
+      "exportedName": "uploadImage",
+      "filename": "src/actions/upload.ts"
+    }
+  },
+  "edge": {}
+}
