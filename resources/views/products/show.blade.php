@@ -21,10 +21,10 @@
                     </div>
 
                     @if($product->gallery && is_array($product->gallery) && count($product->gallery) > 0)
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; margin-top: 20px; max-width: 400px;">
                         <!-- Ana resim de küçükler arasında olsun -->
                         <div class="aspect-square rounded-lg overflow-hidden border-2 border-black cursor-pointer thumbnail-item active" 
-                             style="aspect-ratio: 1/1; cursor: pointer;"
+                             style="aspect-ratio: 1/1; cursor: pointer; width: 100%;"
                              onclick="changeImage('{{ $mainImg }}', this)">
                             <img src="{{ $mainImg }}" class="w-full h-full object-cover" />
                         </div>
@@ -33,7 +33,7 @@
                                 $thumbUrl = \Illuminate\Support\Str::startsWith($img, ['http://', 'https://']) ? $img : asset('storage/' . $img);
                             @endphp
                             <div class="aspect-square rounded-lg overflow-hidden border border-gray-200 cursor-pointer thumbnail-item" 
-                                 style="aspect-ratio: 1/1; cursor: pointer; opacity: 0.6; transition: 0.3s;"
+                                 style="aspect-ratio: 1/1; cursor: pointer; opacity: 0.6; transition: 0.3s; width: 100%;"
                                  onmouseover="this.style.opacity='1'" 
                                  onmouseout="if(!this.classList.contains('active')) this.style.opacity='0.6'"
                                  onclick="changeImage('{{ $thumbUrl }}', this)">
