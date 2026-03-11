@@ -49,6 +49,9 @@ class Settings extends Page implements HasForms
             if (isset($data['footer_logo']) && is_string($data['footer_logo'])) {
                 $data['footer_logo'] = [$data['footer_logo'] => $data['footer_logo']];
             }
+            if (isset($data['logo']) && is_string($data['logo'])) {
+                $data['logo'] = [$data['logo'] => $data['logo']];
+            }
 
             if (method_exists($this, 'getSchema')) {
                 $this->getSchema('form')->fill($data);
@@ -77,6 +80,12 @@ class Settings extends Page implements HasForms
                                 TextInput::make('siteTitle')
                                     ->label('Site Başlığı (Marka Adı)')
                                     ->required(),
+                                FileUpload::make('logo')
+                                    ->label('Üst Logo (Header Logo)')
+                                    ->image()
+                                    ->disk('public')
+                                    ->directory('settings')
+                                    ->helperText('Sitenin sol üst köşesinde görünecek ana logo.'),
                                 TextInput::make('contact.phone')
                                     ->label('İletişim Telefon Numarası')
                                     ->tel(),
@@ -173,6 +182,9 @@ class Settings extends Page implements HasForms
             }
             if (isset($data['footer_logo']) && is_array($data['footer_logo'])) {
                 $data['footer_logo'] = array_values($data['footer_logo'])[0] ?? null;
+            }
+            if (isset($data['logo']) && is_array($data['logo'])) {
+                $data['logo'] = array_values($data['logo'])[0] ?? null;
             }
 
             $setting = Setting::first();
