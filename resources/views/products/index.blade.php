@@ -11,30 +11,35 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 @forelse($products as $product)
-                    <a href="/urunler/{{ $product->slug }}" class="group block">
-                        <div
-                            class="aspect-[4/5] overflow-hidden rounded-2xl mb-6 bg-gray-50 shadow-sm border border-gray-100 relative">
-                            @php
-                                $imgSrc = 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop';
-                                if ($product->image) {
-                                    if (\Illuminate\Support\Str::startsWith($product->image, ['http://', 'https://'])) {
-                                        $imgSrc = $product->image;
-                                    } elseif (\Illuminate\Support\Str::startsWith($product->image, '/uploads/')) {
-                                        $imgSrc = asset($product->image);
-                                    } else {
-                                        $imgSrc = asset('storage/' . $product->image);
+                    <div class="group block">
+                        <a href="/urunler/{{ $product->slug }}" class="block">
+                            <div
+                                class="aspect-[4/5] overflow-hidden rounded-2xl mb-6 bg-gray-50 shadow-sm border border-gray-100 relative">
+                                @php
+                                    $imgSrc = 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop';
+                                    if ($product->image) {
+                                        if (\Illuminate\Support\Str::startsWith($product->image, ['http://', 'https://'])) {
+                                            $imgSrc = $product->image;
+                                        } elseif (\Illuminate\Support\Str::startsWith($product->image, '/uploads/')) {
+                                            $imgSrc = asset($product->image);
+                                        } else {
+                                            $imgSrc = asset('storage/' . $product->image);
+                                        }
                                     }
-                                }
-                            @endphp
-                            <img src="{{ $imgSrc }}" alt="{{ $product->title }}"
-                                class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                        </div>
+                                @endphp
+                                <img src="{{ $imgSrc }}" alt="{{ $product->title }}"
+                                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                            </div>
+                        </a>
+                        
                         <div class="space-y-2">
-                            <div class="flex justify-between items-center">
-                                <h2 class="text-xl font-serif font-medium group-hover:text-gray-600 transition">
-                                    {{ $product->title }}
-                                </h2>
-                                <span class="font-bold text-lg">{{ $product->price }} TL</span>
+                            <div class="flex justify-between items-start gap-4">
+                                <a href="/urunler/{{ $product->slug }}" class="hover:text-gray-600 transition">
+                                    <h2 class="text-xl font-serif font-medium">
+                                        {{ $product->title }}
+                                    </h2>
+                                </a>
+                                <span class="font-bold text-lg whitespace-nowrap">{{ $product->price }} TL</span>
                             </div>
                             <p class="text-gray-500 text-sm line-clamp-2">{{ $product->description }}</p>
 
@@ -51,7 +56,7 @@
                                 </div>
                             @endif
                         </div>
-                    </a>
+                    </div>
                 @empty
                     <div class="col-span-1 lg:col-span-3 py-20 text-center bg-gray-50 rounded-2xl">
                         <p class="text-gray-500">Henüz ürün eklenmemiş.</p>
