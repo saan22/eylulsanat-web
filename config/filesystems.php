@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app/private'),
+            'root' => '/home/eylulsan/storage/app/private',
             'serve' => true,
             'throw' => false,
             'report' => false,
@@ -40,8 +40,8 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => base_path('public_html/storage'),
-            'url' => rtrim(env('APP_URL', 'https://eylulsanatatolyesi.com.tr'), '/').'/storage',
+            'root' => '/home/eylulsan/public_html/storage',
+            'url' => 'https://eylulsanatatolyesi.com.tr/storage',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,

@@ -90,34 +90,35 @@ Route::get('/sys/storage-link', function () {
     }
 });
 
-// Depolama Sorunlarını Giderme (Gelişmiş)
+// Depolama Sorunlarını Giderme (Ultimate Fixer)
 Route::get('/sys/fix-storage', function () {
     $results = [];
+    $dirs = [
+        '/home/eylulsan/public_html/storage',
+        '/home/eylulsan/storage/app/public',
+        '/home/eylulsan/storage/app/private',
+        '/home/eylulsan/storage/app/livewire-tmp',
+        '/home/eylulsan/storage/framework/cache',
+        '/home/eylulsan/storage/framework/sessions',
+        '/home/eylulsan/storage/framework/views'
+    ];
     
-    // 1. Mevcut durum kontrolü
-    $appStorage = storage_path('app/public');
-    $webRootStorage = base_path('public_html/storage'); // Genelde ana dizin içindedir
-    
-    $results[] = "Uygulama Dizini: " . base_path();
-    $results[] = "Asıl Fotoğraf Klasörü: " . $appStorage . (is_writable($appStorage) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
-    
-    // Eğer public_html içinde değilse ve yoksa oluşturmayı deneyelim
-    if (!file_exists($webRootStorage)) {
-        if (mkdir($webRootStorage, 0755, true)) {
-            $results[] = "BAŞARI: public_html/storage klasörü oluşturuldu! ✅";
+    foreach ($dirs as $dir) {
+        if (!file_exists($dir)) {
+            if (mkdir($dir, 0777, true)) {
+                $results[] = "OLUŞTURULDU: $dir";
+            } else {
+                $results[] = "HATA (OLUŞTURULAMADI): $dir";
+            }
         } else {
-            $results[] = "HATA: public_html/storage bulunamadı ve oluşturulamadı. ❌";
+            chmod($dir, 0777);
+            $results[] = "DÜZELTİLDİ (İzinler): $dir";
         }
-    } else {
-        $results[] = "BİLGİ: public_html/storage klasörü mevcut." . (is_writable($webRootStorage) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
     }
     
-    // Livewire Geçici Dosya Klasörü Kontrolü
-    $livewireTmp = storage_path('app/livewire-tmp');
-    if (!file_exists($livewireTmp)) {
-        mkdir($livewireTmp, 0755, true);
-    }
-    $results[] = "Livewire Geçici Klasör: " . $livewireTmp . (is_writable($livewireTmp) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
-    
-    return "<pre>" . implode("\n", $results) . "</pre>";
+    return "<pre>" . implode("\n", $results) . "\n\nİŞLEM TAMAMLANDI! Lütfen sayfayı yenileyip tekrar deneyin.</pre>";
+});
+
+Route::get('/sys/phpinfo', function () {
+    return phpinfo();
 });
