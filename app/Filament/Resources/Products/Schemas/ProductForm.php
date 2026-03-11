@@ -18,7 +18,8 @@ class ProductForm
                 TextInput::make('title')->label('Ürün Adı')
                     ->required(),
                 TextInput::make('slug')->label('Bağlantı URL (Slug)')
-                    ->required(),
+                    ->required()
+                    ->unique('products', 'slug', ignoreRecord: true),
                 Textarea::make('description')->label('Ürün Açıklaması')
                     ->columnSpanFull(),
                 TextInput::make('price')->label('Fiyat')

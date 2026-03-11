@@ -18,7 +18,8 @@ class CourseForm
                 TextInput::make('title')->label('Başlık')
                     ->required(),
                 TextInput::make('slug')->label('Bağlantı URL (Slug)')
-                    ->required(),
+                    ->required()
+                    ->unique('courses', 'slug', ignoreRecord: true),
                 Textarea::make('description')->label('Kısa Açıklama')
                     ->columnSpanFull(),
                 Textarea::make('long_description')->label('Detaylı Açıklama')
