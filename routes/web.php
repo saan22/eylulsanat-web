@@ -89,3 +89,35 @@ Route::get('/sys/storage-link', function () {
         return "Hata: Link oluşturulamadı. Lütfen teknik destekle görüşün veya 'public_html/storage' klasörünü manuel oluşturun.";
     }
 });
+
+// Depolama Sorunlarını Giderme (Gelişmiş)
+Route::get('/sys/fix-storage', function () {
+    $results = [];
+    
+    // 1. Mevcut durum kontrolü
+    $appStorage = storage_path('app/public');
+    $webRootStorage = base_path('public_html/storage'); // Genelde ana dizin içindedir
+    
+    $results[] = "Uygulama Dizini: " . base_path();
+    $results[] = "Asıl Fotoğraf Klasörü: " . $appStorage . (is_writable($appStorage) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
+    
+    // Eğer public_html içinde değilse ve yoksa oluşturmayı deneyelim
+    if (!file_exists($webRootStorage)) {
+        if (mkdir($webRootStorage, 0755, true)) {
+            $results[] = "BAŞARI: public_html/storage klasörü oluşturuldu! ✅";
+        } else {
+            $results[] = "HATA: public_html/storage bulunamadı ve oluşturulamadı. ❌";
+        }
+    } else {
+        $results[] = "BİLGİ: public_html/storage klasörü mevcut." . (is_writable($webRootStorage) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
+    }
+    
+    // Livewire Geçici Dosya Klasörü Kontrolü
+    $livewireTmp = storage_path('app/livewire-tmp');
+    if (!file_exists($livewireTmp)) {
+        mkdir($livewireTmp, 0755, true);
+    }
+    $results[] = "Livewire Geçici Klasör: " . $livewireTmp . (is_writable($livewireTmp) ? " [YAZILABİLİR ✅]" : " [YAZILAMAZ ❌ - İzinleri 755 yapın]");
+    
+    return "<pre>" . implode("\n", $results) . "</pre>";
+});
