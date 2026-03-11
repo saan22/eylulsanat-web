@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFBF4;
+  --foreground: #2D2A26;
+}
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --color-primary: #8B2C24; /* Varsayılan bordo kahve tonu */
+  --color-secondary: #E3D9C6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+/* Sayfa geçişleri ve genel yumuşaklık */
+* {
+  transition: background-color 0.3s ease;
+}
