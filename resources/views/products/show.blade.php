@@ -19,7 +19,7 @@
                             class="w-full h-full object-cover" />
                     </div>
 
-                    @if($product->gallery && count($product->gallery) > 0)
+                    @if($product->gallery && is_array($product->gallery) && count($product->gallery) > 0)
                     <div class="grid grid-cols-4 gap-4">
                         <!-- Ana resim de küçükler arasınsa olsun ki geri dönülebilsin -->
                         <div class="aspect-square rounded-lg overflow-hidden border-2 border-black cursor-pointer thumbnail" onclick="changeImage('{{ $mainImg }}', this)">
@@ -61,7 +61,7 @@
                         </p>
                     </div>
 
-                    @if($product->features && count($product->features) > 0)
+                    @if($product->features && is_array($product->features) && count($product->features) > 0)
                     <div class="border-t border-b border-gray-100 py-8 space-y-4">
                         <h3 class="font-bold text-sm uppercase tracking-widest text-gray-400">Ürün Özellikleri</h3>
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
