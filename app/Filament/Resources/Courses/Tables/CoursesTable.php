@@ -15,6 +15,7 @@ class CoursesTable
     {
         return $table
             ->columns([
+                \Filament\Tables\Columns\ToggleColumn::make('is_active')->label('Yayında'),
                 TextColumn::make('title')->label('Başlık')
                     ->searchable(),
                 TextColumn::make('slug')->label('Bağlantı URL (Slug)')

@@ -13,6 +13,8 @@ class CourseForm
     {
         return $schema
             ->components([
+                \Filament\Forms\Components\Toggle::make('is_active')->label('Yayında')->default(true)
+                    ->columnSpanFull(),
                 TextInput::make('title')->label('Başlık')
                     ->required(),
                 TextInput::make('slug')->label('Bağlantı URL (Slug)')

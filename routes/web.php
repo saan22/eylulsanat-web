@@ -5,14 +5,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // Sadece örnek kursları (varsa aktif filtresi eklenebilir) 3 tane al
-    $activeCourses = Course::take(3)->get();
+    $activeCourses = Course::where('is_active', true)->take(3)->get();
 
     return view('welcome', compact('activeCourses'));
 });
 
 // Kurs Rotaları
 Route::get('/kurslar', function () {
-    $courses = Course::all();
+    $courses = Course::where('is_active', true)->get();
 
     return view('courses.index', compact('courses'));
 });
@@ -23,7 +23,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 Route::get('/kurslar/{slug}', function ($slug) {
-    $course = Course::where('slug', $slug)->firstOrFail();
+    $course = Course::where('slug', $slug)->where('is_active', true)->firstOrFail();
 
     return view('courses.show', compact('course'));
 });
@@ -59,4 +59,10 @@ Route::post('/iletisim', function (Request $request) {
 
     // Başarı mesajıyla sayfaya geri döndür
     return back()->with('success', 'Mesajınız başarıyla alındı, en kısa sürede size dönüş yapacağız.');
+});
+
+// Veritabanı Migrasyonlarını (Tablo Güncellemelerini) Host Üzerinden Çalıştırmak İçin Gizli URL
+Route::get('/sys/migrate', function () {
+    \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+    return "Veritabanı Tabloları Başarıyla Güncellendi! / Migration successfully completed.";
 });
