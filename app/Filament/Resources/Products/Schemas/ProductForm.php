@@ -26,7 +26,8 @@ class ProductForm
                     ->numeric()
                     ->prefix('₺'),
                 FileUpload::make('image')->label('Ürün Görseli')
-                    ->image(),
+                    ->image()
+                    ->disk('public'),
                 TextInput::make('category')->label('Kategori'),
                 Textarea::make('features')->label('Özellikler (JSON formatı)')
                     ->columnSpanFull(),

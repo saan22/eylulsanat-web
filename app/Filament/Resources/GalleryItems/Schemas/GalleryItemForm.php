@@ -17,6 +17,7 @@ class GalleryItemForm
                     ->label('Galeri Görseli')
                     ->image()
                     ->required()
+                    ->disk('public')
                     ->columnSpanFull(),
                 TextInput::make('title')->label('Başlık'),
                 TextInput::make('category')->label('Kategori (Opsiyonel)'),

@@ -116,7 +116,11 @@ Route::get('/sys/fix-storage', function () {
         }
     }
     
-    return "<pre>" . implode("\n", $results) . "\n\nİŞLEM TAMAMLANDI! Lütfen sayfayı yenileyip tekrar deneyin.</pre>";
+    // Uygulama ayarlarını temizle (Config cache varsa diye)
+    \Illuminate\Support\Facades\Artisan::call('config:clear');
+    \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    
+    return "<pre>" . implode("\n", $results) . "\n\nİŞLEM TAMAMLANDI! Önbellekler Temizlendi. Lütfen sayfayı yenileyip (F5) tekrar deneyin.</pre>";
 });
 
 Route::get('/sys/phpinfo', function () {

@@ -27,7 +27,8 @@ class CourseForm
                 Textarea::make('short_description')->label('Özet Açıklama')
                     ->columnSpanFull(),
                 FileUpload::make('image')->label('Kapak Fotoğrafı')
-                    ->image(),
+                    ->image()
+                    ->disk('public'),
                 TextInput::make('instructor')->label('Eğitmen'),
                 TextInput::make('duration')->label('Süre (Örn: 3 Hafta)'),
                 TextInput::make('schedule')->label('Program (Örn: Salı, Perşembe)'),
