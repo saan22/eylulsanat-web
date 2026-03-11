@@ -46,6 +46,9 @@ class Settings extends Page implements HasForms
             if (isset($data['about']['image']) && is_string($data['about']['image'])) {
                 $data['about']['image'] = [$data['about']['image'] => $data['about']['image']];
             }
+            if (isset($data['footer_logo']) && is_string($data['footer_logo'])) {
+                $data['footer_logo'] = [$data['footer_logo'] => $data['footer_logo']];
+            }
 
             if (method_exists($this, 'getSchema')) {
                 $this->getSchema('form')->fill($data);
@@ -127,6 +130,29 @@ class Settings extends Page implements HasForms
                                     )
                                     ->addActionLabel('Yeni Madde Ekle'),
                             ]),
+
+                        // Footer (Alt Alan) ve İletişim
+                        Tabs\Tab::make('Alt Alan (Footer) & İletişim')
+                            ->icon('heroicon-o-variable')
+                            ->schema([
+                                FileUpload::make('footer_logo')
+                                    ->label('Footer Logo')
+                                    ->image()
+                                    ->disk('public')
+                                    ->directory('settings'),
+                                Textarea::make('siteDescription')
+                                    ->label('Footer Kısa Açıklama')
+                                    ->placeholder('Atölyemiz hakkında footerda görünecek kısa metin...')
+                                    ->rows(3),
+                                TextInput::make('contact.address')
+                                    ->label('Adres Bilgisi'),
+                                TextInput::make('contact.phone')
+                                    ->label('Telefon Numarası')
+                                    ->tel(),
+                                TextInput::make('contact.email')
+                                    ->label('E-posta Adresi')
+                                    ->email(),
+                            ]),
                     ])
                     ->columnSpan('full'),
             ])
@@ -144,6 +170,9 @@ class Settings extends Page implements HasForms
             }
             if (isset($data['about']['image']) && is_array($data['about']['image'])) {
                 $data['about']['image'] = array_values($data['about']['image'])[0] ?? null;
+            }
+            if (isset($data['footer_logo']) && is_array($data['footer_logo'])) {
+                $data['footer_logo'] = array_values($data['footer_logo'])[0] ?? null;
             }
 
             $setting = Setting::first();

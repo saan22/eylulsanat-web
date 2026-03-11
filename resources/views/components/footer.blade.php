@@ -2,14 +2,17 @@
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
 
         <div class="md:col-span-2">
-            @if(isset($settings['logo']) && $settings['logo'])
+            @php
+                $footerLogo = $settings['footer_logo'] ?? ($settings['logo'] ?? null);
+            @endphp
+            @if($footerLogo)
                 @php
-                    if (\Illuminate\Support\Str::startsWith($settings['logo'], ['http://', 'https://'])) {
-                        $logoImg = $settings['logo'];
-                    } elseif (\Illuminate\Support\Str::startsWith($settings['logo'], '/uploads/')) {
-                        $logoImg = asset($settings['logo']);
+                    if (\Illuminate\Support\Str::startsWith($footerLogo, ['http://', 'https://'])) {
+                        $logoImg = $footerLogo;
+                    } elseif (\Illuminate\Support\Str::startsWith($footerLogo, '/uploads/')) {
+                        $logoImg = asset($footerLogo);
                     } else {
-                        $logoImg = asset('storage/' . $settings['logo']);
+                        $logoImg = asset('storage/' . $footerLogo);
                     }
                 @endphp
                 <img src="{{ $logoImg }}" alt="{{ $settings['siteTitle'] ?? 'Eylül Sanat' }}"
