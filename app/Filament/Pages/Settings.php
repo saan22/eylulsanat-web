@@ -86,6 +86,7 @@ class Settings extends Page implements HasForms
                                 FileUpload::make('hero.image')
                                     ->label('Arka Plan Görseli')
                                     ->image()
+                                    ->disk('public')
                                     ->directory('settings')
                                     ->imageEditor(),
                                 TextInput::make('hero.title')
@@ -101,6 +102,7 @@ class Settings extends Page implements HasForms
                                 FileUpload::make('about.image')
                                     ->label('Hakkımızda Görseli')
                                     ->image()
+                                    ->disk('public')
                                     ->directory('settings')
                                     ->imageEditor(),
                                 TextInput::make('about.title')
