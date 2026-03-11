@@ -13,6 +13,8 @@ class ProductForm
     {
         return $schema
             ->components([
+                \Filament\Forms\Components\Toggle::make('is_active')->label('Yayında')->default(true)
+                    ->columnSpanFull(),
                 TextInput::make('title')->label('Ürün Adı')
                     ->required(),
                 TextInput::make('slug')->label('Bağlantı URL (Slug)')

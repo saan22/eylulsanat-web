@@ -15,6 +15,7 @@ class ProductsTable
     {
         return $table
             ->columns([
+                \Filament\Tables\Columns\ToggleColumn::make('is_active')->label('Yayında'),
                 TextColumn::make('title')->label('Ürün Adı')
                     ->searchable(),
                 TextColumn::make('slug')->label('Bağlantı URL (Slug)')

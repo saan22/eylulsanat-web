@@ -14,6 +14,7 @@ class GalleryItemsTable
     {
         return $table
             ->columns([
+                \Filament\Tables\Columns\ToggleColumn::make('is_active')->label('Yayında'),
                 \Filament\Tables\Columns\ImageColumn::make('url')->label('Görsel')->square(),
                 TextColumn::make('title')->label('Başlık')
                     ->searchable(),

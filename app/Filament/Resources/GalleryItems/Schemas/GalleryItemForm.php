@@ -11,6 +11,8 @@ class GalleryItemForm
     {
         return $schema
             ->components([
+                \Filament\Forms\Components\Toggle::make('is_active')->label('Yayında')->default(true)
+                    ->columnSpanFull(),
                 \Filament\Forms\Components\FileUpload::make('url')
                     ->label('Galeri Görseli')
                     ->image()

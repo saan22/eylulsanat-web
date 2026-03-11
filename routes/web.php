@@ -30,14 +30,14 @@ Route::get('/kurslar/{slug}', function ($slug) {
 
 // Mağaza (Ürünler) Rotaları
 Route::get('/urunler', function () {
-    $products = Product::all();
+    $products = Product::where('is_active', true)->get();
 
     return view('products.index', compact('products'));
 });
 
 // Galeri Rotası
 Route::get('/galeri', function () {
-    $galleryItems = GalleryItem::inRandomOrder()->get();
+    $galleryItems = GalleryItem::where('is_active', true)->inRandomOrder()->get();
 
     return view('gallery.index', compact('galleryItems'));
 });
