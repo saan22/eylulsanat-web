@@ -2,7 +2,7 @@
     <div class="pt-48 pb-24 bg-white min-h-screen">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Kurs Seçkisi</h1>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Mağaza Seçkisi</h1>
                 <p class="text-gray-500">
                     Eylül Sanat Atölyesi'nde eğitmenlerimiz ve sanatçılarımız tarafından özenle hazırlanan sınırlı
                     sayıdaki eserler.
@@ -11,7 +11,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 @forelse($products as $product)
-                    <div class="group block">
+                    <a href="/urunler/{{ $product->slug }}" class="group block">
                         <div
                             class="aspect-[4/5] overflow-hidden rounded-2xl mb-6 bg-gray-50 shadow-sm border border-gray-100 relative">
                             @php
@@ -51,7 +51,7 @@
                                 </div>
                             @endif
                         </div>
-                    </div>
+                    </a>
                 @empty
                     <div class="col-span-1 lg:col-span-3 py-20 text-center bg-gray-50 rounded-2xl">
                         <p class="text-gray-500">Henüz ürün eklenmemiş.</p>

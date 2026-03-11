@@ -25,9 +25,17 @@ class ProductForm
                 TextInput::make('price')->label('Fiyat')
                     ->numeric()
                     ->prefix('₺'),
-                FileUpload::make('image')->label('Ürün Görseli')
+                FileUpload::make('image')->label('Ana Ürün Görseli')
                     ->image()
-                    ->disk('public'),
+                    ->disk('public')
+                    ->required()
+                    ->helperText('Mağaza listesinde görünecek ana fotoğraf.'),
+                FileUpload::make('gallery')->label('Diğer Ürün Görselleri')
+                    ->image()
+                    ->multiple()
+                    ->disk('public')
+                    ->maxFiles(3)
+                    ->helperText('En fazla 3 adet ek görsel ekleyebilirsiniz.'),
                 TextInput::make('category')->label('Kategori'),
                 Textarea::make('features')->label('Özellikler (JSON formatı)')
                     ->columnSpanFull(),

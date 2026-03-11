@@ -35,6 +35,12 @@ Route::get('/urunler', function () {
     return view('products.index', compact('products'));
 });
 
+Route::get('/urunler/{slug}', function ($slug) {
+    $product = Product::where('slug', $slug)->where('is_active', true)->firstOrFail();
+
+    return view('products.show', compact('product'));
+});
+
 // Galeri Rotası
 Route::get('/galeri', function () {
     $galleryItems = GalleryItem::where('is_active', true)->inRandomOrder()->get();
